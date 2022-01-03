@@ -1,0 +1,26 @@
+{
+	"badge": true,
+	"badge-color": "#6e6e6e",
+	"blacklist": [],
+	"block-page-redirection": true,
+	"countdown": 0,
+	"default-action": "ignore",
+	"domain": false,
+	"enabled": true,
+	"faqs": false,
+	"immediate-action": false,
+	"last-update": 1543221437584,
+	"numbers": 3,
+	"popup-hosts": [
+		"myaccount.google.com",
+		"account.microsoft.com"
+	],
+	"protocols": [],
+	"silent": [],
+	"simulate-allow": true,
+	"timeout": 3,
+	"top-hosts": [],
+	"version": "0.5.0.6",
+	"whitelist-mode": "popup-hosts",
+	"wot": false
+}
