@@ -1,0 +1,33 @@
+:root {
+	--emoji-font: 
+		'AMC Icons', /*account.microsoft.com*/
+		'codicon', /*vscode.dev*/
+		'docons', /*docs.microsoft.com*/
+		'ShellFabricMDL2Icons', /*to-do.live.com*/
+		'FabricMDL2Icons', /*outlook.live.com | onedrive.live.com*/
+		'Material Icons Extended', /*google.com*/
+		'MWF-MDL2', /*microsoft.com*/
+		'tgico'; /*web.telegram.org*/
+	
+	--ui-font: 'SF Pro Display', var(--emoji-font);
+}
+
+:not(i) {
+	font-family: var(--ui-font) !important;
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+	height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 5px;
+	background: #7D7D7D;
+}
+
+@-moz-document domain("reddit.com") {
+::-webkit-scrollbar {
+	display: none;
+}
+}
