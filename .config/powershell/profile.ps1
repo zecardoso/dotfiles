@@ -1,15 +1,29 @@
-# Import-Module posh-git -Scope CurrentUser
-# Import-Module oh-my-posh -Scope CurrentUser
-# Install-Module -Name PSReadline -Scope CurrentUser
+# Install-Module posh-git -Scope CurrentUser -Force
+# Install-Module oh-my-posh -Scope CurrentUser -Force
+# Install-Module -Name PSReadline -Scope CurrentUser -Force
 
-Set-PoshPrompt -Theme ys
+Import-Module posh-git
+Import-Module oh-my-posh
+Import-Module PSReadline
 
-# Autocomplete, keybinds e histórico de comandos
+Set-PoshPrompt -Theme spaceship
+
+# Autocomplete, keybinds and command history
 Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
 Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
 Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
 Set-PSReadlineOption -HistorySearchCursorMovesToEnd
 
-# Autosugestões
+# Autosuggestions
 Set-PSReadlineOption -ShowToolTips
 Set-PSReadlineOption -PredictionSource History
+
+# Custom functions
+function GitR {
+	[string]$remote = git config --get remote.origin.url
+	if ($remote) {
+		Start-Process $remote
+		break
+	}
+	Write-Output "> No git URL found"
+}
