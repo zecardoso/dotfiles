@@ -1,0 +1,95 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "final_space": true,
+  "osc99": false,
+  "console_title": false,
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "horizontal_offset": 0,
+      "vertical_offset": 0,
+      "segments": [
+        {
+          "type": "session",
+          "style": "plain",
+          "invert_powerline": false,
+          "foreground": "darkGray",
+          "properties": {
+            "prefix": "",
+            "template": "{{ .UserName }}"
+          }
+        },
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "white",
+          "properties": {
+            "prefix": "",
+            "text": "in"
+          }
+        },
+        {
+          "type": "path",
+          "style": "plain",
+          "invert_powerline": false,
+          "foreground": "lightGreen",
+          "properties": {
+            "style": "full",
+            "enable_hyperlink": true,
+            "prefix": ""
+          }
+        },
+        {
+          "type": "git",
+          "style": "plain",
+          "foreground": "#5FD7FF",
+          "properties": {
+            "prefix": "<white>on</> ",
+            "branch_icon": "",
+            "branch_ahead_icon": "",
+            "branch_behind_icon": "",
+            "branch_gone_icon": "",
+            "branch_identical_icon": "",
+            "commit_icon": "",
+            "tag_icon": "",
+            "merge_icon": "",
+            "rebase_icon": "",
+            "cherry_pick_icon": "",
+            "revert_icon": "",
+            "template": "{{ .HEAD }}{{ if .Staging.Changed }}<#87FF00> ● {{ .Staging.String }}</>{{ end }}{{ if .Working.Changed }}<#D75F00> ● {{ .Working.String }}</>{{ end }}",
+            "fetch_status": true
+          }
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "right",
+      "segments": [
+        {
+          "type": "time",
+          "style": "plain",
+          "foreground": "darkGray"
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "lightGreen",
+          "properties": {
+            "prefix": "",
+            "text": "\u276F",
+            "postfix": ""
+          }
+        }
+      ]
+    }
+  ]
+}
