@@ -10,11 +10,11 @@
 		'MWF-MDL2', /*microsoft.com*/
 		'tgico'; /*web.telegram.org*/
 	
-	--ui-font: 'SF Pro Display', var(--emoji-font);
+	--custom-font: 'SF Pro Display', var(--emoji-font);
 }
 
 :not(i) {
-	font-family: var(--ui-font) !important;
+	font-family: var(--custom-font) !important;
 }
 
 ::-webkit-scrollbar {
